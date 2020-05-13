@@ -4,6 +4,10 @@ import sys
 
 if len(sys.argv) > 1:
     name = sys.argv[1]
+    fname = name + '.cpp'
+    if os.path.exists(fname):
+        print('File {} exists.'.format(fname))
+        sys.exit(1)
     with open(name + '.cpp', 'w+') as f:
         f.write('''
 #include <bits/stdc++.h>

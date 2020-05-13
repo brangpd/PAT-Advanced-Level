@@ -21,6 +21,14 @@ int main() {
     ++ait;
     ++bit;
   }
+  while (ait != aite) {
+    char output = toupper(*ait++);
+    bool inserted;
+    tie(ignore, inserted) = worn.insert(output);
+    if (inserted) {
+      cout << output;
+    }
+  }
   return 0;
 }
 } // namespace p1084
